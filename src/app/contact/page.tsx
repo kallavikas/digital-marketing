@@ -10,12 +10,12 @@ export default function ContactUs() {
     message: '',
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setAppointmentData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleAppointment = (e) => {
+  const handleAppointment = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const { name, phone, message } = appointmentData;

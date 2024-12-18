@@ -139,7 +139,8 @@ export default function AboutUs() {
       </Box>
 
       {/* Lead Capture Form */}
-      <motion.div
+      <Box
+        component={motion.div}
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
@@ -202,7 +203,7 @@ export default function AboutUs() {
             Send Message 🚀
           </Button>
         </form>
-      </motion.div>
+      </Box>
     </Container>
   );
 }

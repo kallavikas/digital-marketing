@@ -1,9 +1,11 @@
 'use client';
 
+import { useEffect } from 'react';
+
 export default function Home() {
-  return (
-    <>
-      {typeof window !== 'undefined' && window.location.replace('/services')}
-    </>
-  );
+  useEffect(() => {
+    window.location.replace('/services');
+  }, []);
+
+  return null;
 } 
